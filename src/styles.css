@@ -1,0 +1,36 @@
+/* body{
+    background-image: src("https://miro.medium.com/max/10000/1*ccFmJGYNsKq6eNgXfiz-EQ.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    top: 15px;
+} */
+
+.bg{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+}
+
+.start{
+    position: relative;
+    left: 27%;
+}
+
+#question{
+    font-size: large;
+    color: white;
+}
+.container{
+    margin-top: 15%;
+    display: grid;
+}
+
+.questionButton{
+    background-color: #6900FD;
+    border-style: none !important;
+    color: white;
+}

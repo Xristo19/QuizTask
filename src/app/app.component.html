@@ -1,0 +1,43 @@
+<img src="assets/image/pic.jpeg" class="bg">
+    <h2 class="text-center text-primary">Lets Start!</h2>
+        <div class="container">
+            <div class="row">
+            <br>
+            <br>
+        <div class="components col-md-6 col-lg-6 col-sm-6 col-6">  
+            <div class="form-group">
+                <select   class="form-control bg-primary text-white border border-primary" id='name' style="width: 350px" #ourInput [(ngModel)] = "category">
+                    <option>Any Cattegory</option>
+                    <option [value]="item" *ngFor="let item of container;let i = index">{{item}}</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <select class="form-control bg-primary text-white border border-primary" id="exampleFormControlSelect1" style="width: 350px" #ourInput1 [(ngModel)] = "difficulty">            
+                    <option>Any Difficulty</option>
+                    <option>easy</option>
+                    <option>medium</option>
+                    <option>hard</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-light rounded border start questionButton" style="background-color: #6900FD;" (click) = 'questionList()'>Start</button>
+            </div>  
+            <br>
+            <br>
+            <div class="questionComponent col-md-6 col-lg-6 col-sm-6 col-6">
+                <p id="question"></p>
+                <div id="question" [value]="item" *ngFor="let item of answers;let i = index">
+                    <input type="radio" name="answer" value={{item}} #ourInput2 [(ngModel)] = "clickedAnswer">
+                    <label >{{item}}</label>
+                </div>
+            
+                <br>
+                    <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-light rounded border questionButton" id="next" (click) = 'Start()'>Next</button>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-light rounded border questionButton" id="reset" (click) = 'reset()'>Reset</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
